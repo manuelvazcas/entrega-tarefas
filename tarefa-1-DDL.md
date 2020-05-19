@@ -142,7 +142,7 @@ También los podemos utilizar con `CONSTRAINT`:
 	CHECK nombreATRIBUTO (valor);
 
 #### Ejemplo creación de una base de datos <a name="id6"></a> ####
-![Ejemplo](Img/Ejemplo-1.jpeg)
+![Ejemplo](img/Ejemplo-1.jpeg)
 A través de esta imagen con los datos que nos da el ejercicio haremos la base de datos con lo explicado en estos apuntes.
 
     CREATE DOMAIN Tipo_Código CHAR(5);

@@ -21,7 +21,7 @@ Antes  de empezar el ejercicio hay que especificar un poco los criterios que seg
 - Añadiremos `ALTER` al final del ejercicio por si se nos olvidar añadir algún dato.
 
 #### Creación Base de datos <a name="CBDD"></a> ####
-Abrimos la ventana de comandos y entramos en MariaDB con el comando `mysql -u root -p` y creamos la base de datos `CREATE DATABASE proyecto_investigacion` y escribimos `use proyecto_investigacion` para usar esa base de datos para el ejercicio.![](Img/ejercicio1-1.PNG)
+Abrimos la ventana de comandos y entramos en MariaDB con el comando `mysql -u root -p` y creamos la base de datos `CREATE DATABASE proyecto_investigacion` y escribimos `use proyecto_investigacion` para usar esa base de datos para el ejercicio.![](img/ejercicio1-1.PNG)
 
 #### Creación tablas <a name="CT"></a> ####
 Empezamos a crear las tablas.
@@ -33,7 +33,7 @@ Empezamos a crear las tablas.
 	);
 En MariaDB:
 
-![](Img/ejercicio1-3.PNG)
+![](img/ejercicio1-3.PNG)
 
 ##### Departamento #####
 	CREATE TABLE Departamento (
@@ -42,7 +42,7 @@ En MariaDB:
 	);
 En MariaDB:
 
-![](Img/ejercicio1-2.PNG)
+![](img/ejercicio1-2.PNG)
 
 ##### Ubicación #####
 
@@ -59,7 +59,7 @@ En MariaDB:
 	);
 En MariaDB:
 
-![](Img/ejercicio1-4.PNG)
+![](img/ejercicio1-4.PNG)
 
 ##### Grupo investigación #####
 
@@ -74,7 +74,7 @@ En MariaDB:
 	);
 En MariaDB:
 
-![](Img/ejercicio1-5.PNG)
+![](img/ejercicio1-5.PNG)
 
 ##### Profesor #####
 
@@ -91,7 +91,7 @@ En MariaDB:
 	);	
 En MariaDB:
 
-![](Img/ejercicio1-6.PNG)
+![](img/ejercicio1-6.PNG)
 
 ##### Participación #####
 Pararemos de escribir el CONSTRAINT entero.
@@ -109,7 +109,7 @@ Pararemos de escribir el CONSTRAINT entero.
 	);
 En MariaDB:
 
-![](Img/ejercicio1-7.PNG)
+![](img/ejercicio1-7.PNG)
 
 ##### Proyecto #####
 
@@ -127,7 +127,7 @@ En MariaDB:
 	);
 En MariaDB:
 
-![](Img/ejercicio1-8.PNG)
+![](img/ejercicio1-8.PNG)
 
 ##### Financiación #####
 
@@ -145,7 +145,7 @@ En `Cantidad_Dinero` pongo INTEGER ya que MONEY en MariaDB no funciona.
 
 En MariaDB:
 
-![](Img/ejercicio1-9.PNG)
+![](img/ejercicio1-9.PNG)
 
 ##### Programa #####
 
@@ -155,12 +155,12 @@ En MariaDB:
 
 En MariaDB:
 
-![](Img/ejercicio1-10.PNG)
+![](img/ejercicio1-10.PNG)
 
 ##### Resultado tablas #####
 Tras acabar de crear las tablas, antes de ir a crear los `ALTER` comprobaremos que están todas creadas con el comando `SHOW TABLES`:
 
-![](Img/ejercicio1-11.PNG)
+![](img/ejercicio1-11.PNG)
 
 #### ALTER TABLES <a name="AT"></a> ####
 Despues de crear todas las tablas, usaremos ALTER para añadir los datos para relacionarlas entre ellas y para acabar los check.
@@ -174,7 +174,7 @@ En departamento tendremos que añadir la columna de director y luego hacerla una
 								 ON DELETE SET NULL
 En MariaDB:
 
-![](Img/ejercicio1-12.PNG)
+![](img/ejercicio1-12.PNG)
 
 ##### Grupo investigación #####
 	
@@ -183,14 +183,14 @@ En MariaDB:
                                                    				     ON UPDATE CASCADE
                                                    					 ON DELETE SET NULL;
 En MariaDB:
-![](Img/ejercicio1-13.PNG)
+![](img/ejercicio1-13.PNG)
 
 ##### Profesor #####
 
 	ALTER TABLE Profesor ADD CONSTRAINT Experiencia CHECK (Experiencia BETWEEN 1 AND 50);
 En MariaDB:
 
-![](Img/ejercicio1-14.PNG)
+![](img/ejercicio1-14.PNG)
 
 ##### Participación #####
 
@@ -200,7 +200,7 @@ En MariaDB:
 	ALTER TABLE Participacion ADD CONSTRAINT Comprobacion_Fechas CHECK (Fecha_Incorporacion < Fecha_Cese);
 En MariaDB:
 
-![](Img/ejercicio1-15.PNG)
+![](img/ejercicio1-15.PNG)
 
 ##### Proyecto #####
 
@@ -209,7 +209,7 @@ En MariaDB:
 	ALTER TABLE Proyecto ADD CONSTRAINT Unicidad_Nombre UNIQUE(Nombre_Proyecto);
 En MariaDB:
 
-![](Img/ejercicio1-16.PNG)
+![](img/ejercicio1-16.PNG)
 
 ##### Financiación #####
 
@@ -219,7 +219,7 @@ En MariaDB:
 	ALTER TABLE Financiacion ADD CONSTRAINT Unicidad_Asociado UNIQUE(Numero_Asociado);
 En MariaDB:
 
-![](Img/ejercicio1-17.PNG)
+![](img/ejercicio1-17.PNG)
 
 Hasta aquí estaría acabado el ejercicio 1.
 
@@ -229,9 +229,9 @@ En este ejercicio seguiremos los mismos criterios que en el anterior.
 #### Creación base de datos  <a name="CBDD2"></a> ####
 Como hicimos en el ejercicio anterior creamos la base de datos.
 
-![](Img/ejercicio2-1.PNG)
+![](img/ejercicio2-1.PNG)
 
-![](Img/ejercicio2-2.PNG)
+![](img/ejercicio2-2.PNG)
 
 #### Creación tablas <a name="CT2"></a> ####
 Empezamos a  crear las tablas.
@@ -245,7 +245,7 @@ Empezamos a  crear las tablas.
 	);
 En MariaDB:
 
-![](Img/ejercicio2-3.PNG)
+![](img/ejercicio2-3.PNG)
 
 ##### Dependencia #####
 
@@ -264,7 +264,7 @@ En MariaDB:
 	);
 En MariaDB:
 
-![](Img/ejercicio2-4.PNG)
+![](img/ejercicio2-4.PNG)
 
 ##### Cámara #####
 
@@ -279,7 +279,7 @@ En MariaDB:
 	);
 En MariaDB:
 
-![](Img/ejercicio2-5.PNG)
+![](img/ejercicio2-5.PNG)
 
 ##### Tripulacion #####
 
@@ -301,7 +301,7 @@ En MariaDB:
 	);
 En MariaDB:
 
-![](Img/ejercicio2-6.PNG)
+![](img/ejercicio2-6.PNG)
 
 ##### Planeta #####
 
@@ -314,7 +314,7 @@ En MariaDB:
 	);
 En MariaDB:
 
-![](Img/ejercicio2-7.PNG)
+![](img/ejercicio2-7.PNG)
 
 ##### Visita #####
 
@@ -333,7 +333,7 @@ En MariaDB:
 	);
 En MariaDB:
 
-![](Img/ejercicio2-8.PNG)
+![](img/ejercicio2-8.PNG)
 
 ##### Habita #####
 
@@ -348,7 +348,7 @@ En MariaDB:
 	);
 En MariaDB:
 
-![](Img/ejercicio2-9.PNG)
+![](img/ejercicio2-9.PNG)
 
 ##### RAZA #####
 
@@ -361,7 +361,7 @@ En MariaDB:
 	);
 En MariaDB:
 
-![](Img/ejercicio2-10.PNG)
+![](img/ejercicio2-10.PNG)
 
 #### ALTER TABLES <a name="AT2"></a> ####
 Despues de crear todas las tablas, usaremos ALTER para añadir los datos para relacionarlas entre ellas y para acabar los check.
@@ -376,14 +376,14 @@ Tras crear la tabla raza falta por crear una FOREIGN KEY en la tabla de habita.
 		ON DELETE CASCADE;
 En MariaDB:
 
-![](Img/ejercicio2-11.PNG)
+![](img/ejercicio2-11.PNG)
 
 	ALTER TABLE HABITA
 		ADD CONSTRAINT poblacion_mayor_0
 		CHECK (poblacion_Parcial > 0);
 En MariaDB:
 
-![](Img/ejercicio2-13.PNG)
+![](img/ejercicio2-13.PNG)
 
 ##### Camara #####
 
@@ -392,7 +392,7 @@ En MariaDB:
 		CHECK (capacidad > 0);
 En MariaDB:
 
-![](Img/ejercicio2-12.PNG)
+![](img/ejercicio2-12.PNG)
 
 ##### Raza #####
 
@@ -407,6 +407,6 @@ En MariaDB:
 		CHECK (poblacion_total > 0);
 En MariaDB:
 
-![](Img/ejercicio2-14.PNG)
+![](img/ejercicio2-14.PNG)
 
 Hasta aquí el ejercicio 2.
