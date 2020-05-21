@@ -28,6 +28,6 @@ Abrimos el CMD y ponemos el comando para ejecutar MariaDB ``mysql -u root -p``, 
 
 ![MariaDB6](img/InstalacionMariaDB-6.PNG)
 
-Con esto ya estaría instalado MariDB, ahora haremos una prueba creando una base de datos a ver si funciona bien. 
+Con esto ya estaría instalado MariaDB, ahora haremos una prueba creando una base de datos a ver si funciona bien. 
 
 ![MariaDB7](img/InstalacionMariaDB-7.PNG)
